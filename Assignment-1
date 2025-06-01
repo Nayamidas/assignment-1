@@ -1,301 +1,308 @@
-#1-Create a simple class Person with name and age as attributes...
-#class Person:
-#    def _init_(self, name, age):
-#        self.name = name
-#        self.age = age
-#p1 = Person("Nayami", 21)
-#print("Name:", p1.name)
-#print("Age:", p1.age)
+#1-print numbers from 1-10...
+#for i in range(1,11,1):
+#    print(i)
 
-#2-Add a method to the Person class that prints a greeting...
-#class Person:
-#    def _init_(self, name, age):
-#        self.name = name
-#        self.age = age
-#    def greet(self):
-#        print(f"Hello, my name is {self.name} and I am {self.age} years old.")
-#p1 = Person("Nayami", 21)
-#p1.greet()
+#2-Print even numbers from 1 to 20....
+#for i in range(1,21):
+#    if i%2==0:
+#        print(i)
 
-#3-Create a class with a class variable and instance variable...
-#class Dog:
-#    eat="bones"
-#    def _init_(self, name, age):
-#        self.name = name
-#        self.age = age
-#d1 = Dog("Buddy", 3)
-#print(f"{d1.name} eats {d1.eat} aged {d1.age}")
+#3-Check if a number is positive, negative or zero...
+#num=int(input("Enter a Number:"))
+#if num>0:
+#    print("Positive")
+#elif num<0:
+#    print("Negative")
+#else:
+#    print("0")
 
-#4-Create a private attribute in a class and access it using a method...
-#class Person:
-#    def _init_(self, name, age):
-#        self.__name = name  #private
-#        self.age = age
-#    def get_name(self):
-#        return self.__name
-#p1 = Person("Nayami", 21)
-#print("Name:", p1.get_name())
-#print("Age:", p1.age)
+#4-Add two numbers using operators...
+#a=int(input("Enter a Number:"))
+#b=int(input("Enter another Number:"))
+#print("Sum=",a+b)
 
-#5-Create a class with a method that returns the square of a number...
-#class numbers:
-#    def square(self, number):
-#        return number * number
-#m = numbers()
-#result = m.square(5)
-#print("Square is:", result)
+#5-Print multiplication table of a number...
+#num=int(input("enter a number:"))
+#for i in range(1,11):
+#    print(num*i)
 
-#6-Create two objects of a class and demonstrate that they are independent...
-# class person:
-#     def _init_(self, name, age):
-#         self.name=name
-#         self.age=age
-#     def get_age(self):
-#         return self.age
-# p1 = person("Nayami", 21)
-# print("Name:",p1.name,"Age:", p1.age)
-# p2 = person("arpita", 25)
-# print("Name:",p2.name,"Age:",p2.age)
+#6-Find the largest among two numbers...
+#a=int(input("enter a number:"))
+#b=int(input("enter another number"))
+#if(a>b):
+#    print("largest is:",a)
+#else:
+#    print("largest is",b)
 
-#7-Create a class and use a method to set its attributes...
-# class MyClass:
-#     def _init_(self):
-#         self.attribute1 = None
-#         self.attribute2 = None
-#     def set_attributes(self, value1, value2):
-#         self.attribute1 = value1
-#         self.attribute2 = value2
-# my_object = MyClass()
-# my_object.set_attributes("Hello","Nayami")
-# print(my_object.attribute1,my_object.attribute2)
+#7-Use a while loop to print numbers 5 to 1...
+#count = 5
+#while count > 0:
+#    print(count)
+#    count -= 1
 
-#8-Demonstrate use of isinstance() with a class...
-# class MyClass:
-#     pass
-# obj = MyClass()
-# result = isinstance(obj, MyClass)
-# print(f"Is obj an instance of MyClass? {result}")
-# result = isinstance(obj, int)
-# print(f"Is obj an instance of int? {result}")
+#8-Print all characters in a string....
+#str1=str(input("enter a string:"))
+#for i in str1:
+#    print(i)
 
-#9-Demonstrate single inheritance in Python...
-# class Animal:
-#     def _init_(self, name):
-#         self.name = name
-#     def speak(self):
-#         print("Generic animal sound")
-# class Dog(Animal):
-#     def _init_(self, name, breed):
-#         super()._init_(name)
-#         self.breed = breed
-#     def speak(self):
-#         print("Woof!")
-# animal = Animal("Generic")
-# dog = Dog("Buddy", "Golden Retriever")
-# animal.speak()
-# dog.speak()
-# print(dog.name)
+#9-Use logical operator to check if a number is between 10 and 50...
+#number =int(input("Enter a number:"))
+#if number >= 10 and number <= 50:
+#    print(f"{number} is between 10 and 50")
+#else:
+    #print(f"{number} is not between 10 and 50")
 
-#10- Create a base class and derive two child classes with different methods(multilevel inheritance).
-# class Animal:
-#     def _init_(self, name):
-#         self.name = name
-#     def speak(self):
-#         print("Generic animal sound")
-# class Dog(Animal):
-#     def _init_(self, name, breed):
-#         super()._init_(name)
-#         self.breed = breed
-#     def speak(self):
-#         print("Woof!")
-#     def fetch(self):
-#         print("Dog is fetching")
-# class Cat(Animal):
-#     def _init_(self, name, color):
-#         super()._init_(name)
-#         self.color = color
-#     def speak(self):
-#         print("Meow!")
-#     def purr(self):
-#         print("Cat is purring")
-# animal = Animal("Generic Animal")
-# dog = Dog("Buddy", "Golden Retriever")
-# cat = Cat("Whiskers", "Black")
-# animal.speak() 
-# dog.speak()   
-# dog.fetch()  
-# cat.speak()    
-# cat.purr()
+#10-Sum of first 10 natural numbers...
+#sum = 0
+#for i in range(1, 11):
+#    sum += i
+#print("Sum of first 10 natural numbers is:", sum)
 
-#11-Demonstrate method overriding in inheritance...
-# class Parent(): 
-# 	def _init_(self): 
-# 		self.value = "Parent class method call"
-# 	def show(self): 
-# 		print(self.value) 
-# class Child(Parent): 
-# 	def _init_(self): 
-# 		super()._init_()
-# 		self.value = "Child class method call"
-# 	def show(self): 
-# 		print(self.value) 
-# obj1 = Parent() 
-# obj2 = Child() 
-# obj1.show() 
-# obj2.show()
+#11-Print "Odd" or "Even" for numbers 1 to 10...
+#for number in range(1, 11):
+#  if number % 2 == 0:
+#    print("Even")
+#  else:
+#    print("Odd")
 
-#12-Use super() to call a parent class method...
-# class Parent:
-#     def _init_(self, name):
-#         self.name = name
-#     def display(self):
-#         print(f"Parent name: {self.name}")
-# class Child(Parent):
-#     def _init_(self, name, age):
-#         super()._init_(name)
-#         self.age = age
-#     def display(self):
-#         super().display()
-#         print(f"Child age: {self.age}")
-# child_obj = Child("Nayami", 21)
-# child_obj.display()
+#12-Use break to stop loop when number is 5...
+#for i in range(10):
+#    if i == 5:
+#        break
+#    print(i)
 
-#13-Create an abstract base class using abc module....
-# from abc import ABC, abstractmethod
-# class AbstractClass(ABC):
-#     @abstractmethod
-#     def abstract_method(self):
-#         pass
-#     def concrete_method(self):
-#         return "This is a concrete method"
-# class ConcreteClass(AbstractClass):
-#     def abstract_method(self):
-#         return "This is an implementation of the abstract method"
-# concrete_instance = ConcreteClass()
-# print(concrete_instance.abstract_method())
-# print(concrete_instance.concrete_method())
+#13-Print 1 to 10 and use continue to skip printing 5...
+#for i in range(10):
+#    if i == 5:
+#        continue
+#    print(i)
 
-#14-Demonstrate multiple inheritance in Python...
-# class Engine:
-#     def start(self):
-#         return "Engine started"
-# class Electric:
-#     def charge(self):
-#         return "Charging"
-# class HybridCar(Engine, Electric):
-#     def _init_(self, model):
-#         self.model = model
-#     def display(self):
-#         return f"Car model: {self.model}, {self.start()}, {self.charge()}"
-# my_car = HybridCar("Toyota Prius")
-# print(my_car.display())
+#14-Print all elements in a list using a loop...
+#l1=[20,30,40,50,60]
+#for ele in l1:
+#    print(ele)
 
-#15-Demonstrate encapsulation using getter and setter...
-# class Student:
-#     def _init_(self, name, age):
-#         self._name = name 
-#         self._age = age  
-#     def get_name(self):
-#         return self._name
-#     def set_name(self, name):
-#         self._name = name
-#     def get_age(self):
-#         return self._age
-#     def set_age(self, age):
-#         if age > 0:
-#             self._age = age
-#         else:
-#             print("Invalid age")
-# s1 = Student("Nayami", 20)
-# print("Current Name:", s1.get_name())
-# print("Current Age:", s1.get_age())
-# s1.set_name("Arpi")
-# s1.set_age(22)
-# print("Updated Name:", s1.get_name())
-# print("Updated Age:", s1.get_age())
-# s1.set_age(-5)
+#15-Check if a number is divisible by both 3 and 5...
+#number=int(input("enter a number:"))
+#if (number % 3 == 0) and (number % 5 == 0):
+#    print("The number is divisible by both 3 and 5")
+#else:
+#    print("The number is not divisible by both 3 and 5")
 
-#16-Write a program to demonstrate polymorphism with a common method...
-# class Animal:
-#     def speak(self):
-#         print("Generic animal sound")
-# class Dog(Animal):
-#     def speak(self):
-#         print("Woof!")
-# class Cat(Animal):
-#     def speak(self):
-#         print("Meow!")
-# class Cow(Animal):
-#   def speak(self):
-#     print("Moo!")
-# def animal_sound(animal):
-#     animal.speak()
-# if _name_ == "_main_":
-#     my_dog = Dog()
-#     my_cat = Cat()
-#     my_cow = Cow()
-#     generic_animal = Animal()
-#     animal_sound(my_dog)       
-#     animal_sound(my_cat)      
-#     animal_sound(my_cow)      
-#     animal_sound(generic_animal)
+#16-Square of all numbers from 1 to 5...
+#for i in range(1,6):
+#    print(i*i)
 
-#17- Create a class Employee with a method to display the number of employees craeted...
-# class Employee:
-#     emp_count = 0 
-#     def _init_(self):
-#         Employee.emp_count += 1  
-#     @classmethod
-#     def display_emp_count(cls):
-#         print(f"Total employees: {cls.emp_count}")
-# emp1 = Employee()
-# emp2 = Employee()
-# Employee.display_emp_count()  
+#17-Print ASCII values of characters in a string...
+#string = "Hello"
+#for char in string:
+#    ascii_value = ord(char)
+#    print(f"The ASCII value of '{char}' is {ascii_value}")
 
-#18-Demonstrate constructor overloading using default arguments...
-# class Construrctorclass:
-#     def _init_(self, a=None, b=None):
-#         self.a = a
-#         self.b = b
-#         if a is None and b is None:
-#             print("No arguments")
-#         elif a is not None and b is None:
-#             print(f"One argument: a = {a}")
-#         elif a is not None and b is not None:
-#             print(f"Two arguments: a = {a}, b = {b}")
-# obj1 = Construrctorclass()
-# obj2 = Construrctorclass(10)
-# obj3 = Construrctorclass(10, 20)
+#18-Count down from 10 to 1 using while...
+#count = 10
+#while count > 0:
+#    print(count)
+#    count -= 1
 
-#19-Implement a bank account system with deposit and withdrawal methods...
-# class Bank:
-#     def _init_(self, name, age):
-#         self.name = name
-#         self.age = age
-#         self.balance = 0 
-#     def deposit(self, amount, accno):
-#         self.accno = accno
-#         self.balance += amount
-#         print(f"Deposited {amount}. New balance: {self.balance}")
-#     def withdrawal(self, amount, accno):
-#         if amount > self.balance:
-#             print("Insufficient funds.")
-#         else:
-#             self.balance -= amount
-#             print(f"Withdrew {amount}. Remaining balance: {self.balance}")
-# p1 = Bank("Nayami", 24)
-# p1.deposit(500, 8558595)
-# p1.withdrawal(200, 8558595)
+#19-Check if a number is divisible by 2 or 3...
+#number=int(input("enter a number:"))
+#if (number % 2 == 0) and (number % 3 == 0):
+#    print("The number is divisible by both 2 and 3")
+#else:
+#    print("The number is not divisible by both 2 and 3")
 
-#20-Create a class Rectangle with method to calculate area and perimeter...
-# class Rectangle:
-#     def _init_(self, length, width):
-#         self.length = length
-#         self.width = width
-#     def area(self):
-#         return self.length * self.width
-#     def perimeter(self):
-#         return 2 * (self.length + self.width)
-# rect1 = Rectangle(10, 5)
-# print(f"Area: {rect1.area()}")
-# print(f"Perimeter: {rect1.perimeter()}")
+#20-Print sum of digits of a number...
+#num = int(input("Enter a number: "))
+#count = 0
+#while num > 0:
+#    count += num % 10
+#    num = num // 10
+#print(count)
+
+#21-Swap two numbers using a temporary variable...
+#n1=5
+#n2=8
+#temp=0
+#print("Before swapping",n1,n2)
+#if n1>0 and n2>0:
+#    temp=n1
+#    n1=n2
+#    n2=temp
+#print("After swapping",n1,n2)
+
+#22-Print numbers from 1 to 100 that are divisible by 7...
+#for i in range(1,101,1):
+#    if i%7==0:
+#        print(i)
+
+#23- Find the factorial of a number...
+#num=int(input("enter a number"))
+#factorial = 1
+#if num < 0:
+#    print("Factorial is not defined for negative numbers.")
+#elif num == 0:
+#    print("The factorial of 0 is 1")
+#else:
+#    for i in range(1, num + 1):
+#        factorial = factorial * i
+#    print("The factorial of", num, "is", factorial)
+
+# 24-Count vowels in a string...
+# string=str(input("enter a string"))
+# vowels = "aeiouAEIOU"
+# count = 0
+# for char in string:
+#    if char in vowels:
+#        count += 1
+# print("Number of vowels:", count)
+
+#25-Reverse a number using loop...
+# num=int(input("Enter a number:"))
+# reverse_number = 0
+# while num > 0:
+#     remainder = num % 10
+#     reverse_number = (reverse_number * 10) + remainder
+#     num = num // 10
+# print(reverse_number)
+
+#26-Find the maximum in a list using loop...
+# numbers = [3, 7, 1, 9, 4, 6]
+# maximum = numbers[0]
+# for number in numbers:
+#   if number > maximum:
+#     maximum = number
+# print(maximum)
+
+#27-Prime number check using loop...\
+# number = int(input("Enter a number: "))
+# is_prime = True
+# if number <= 1:
+#     is_prime = False
+# else:
+#     for i in range(2, int(number**0.5) + 1):
+#         if number % i == 0:
+#             is_prime = False
+#             break
+# if is_prime:
+#     print(number, "is a prime number")
+# else:
+#     print(number, "is not a prime number")
+
+#28-Sum of even numbers in a list...
+# l1=[20,25,33,60,20]
+# sum=0
+# for i in l1:
+#     if i%2==0:
+#         sum+=i
+#     i+=1
+# print("Addition of even numbers in the list are:",sum)
+
+#29-Print number pattern using nested loops...
+# rows = 5 
+# for i in range(1, rows + 1):
+#     for j in range(1, i + 1):
+#         print(j, end=" ")
+#     print()
+
+#30-Count frequency of digits in a number...
+# num = input("Enter a number: ")
+# digit_count = {}
+# for digit in num:
+#     if digit.isdigit():
+#         digit_count[digit] = digit_count.get(digit, 0) + 1
+# print("Digit frequencies:")
+# for digit in sorted(digit_count):
+#     print(f"{digit}: {digit_count[digit]}")
+
+#31-GCD of two numbers using loop...
+# num1 = 48
+# num2 = 18
+# gcd = 1
+# for i in range(1, min(num1, num2) + 1):
+#     if num1 % i == 0 and num2 % i == 0:
+#         gcd = i
+# print("GCD of", num1, "and", num2, "is", gcd)
+
+#32-Check if a number is Palindrome or not...
+# num = input("Enter a number: ")
+# reversed_num = num[::-1]
+# if num == reversed_num:
+#     print("The number is a palindrome.")
+# else:
+#     print("The number is not a palindrome.")
+
+#33-Count words in a sentence...
+# def count_words(sentence):
+#     words = sentence.split()
+#     return len(words)
+# sentence = "This is a sample sentence."
+# word_count = count_words(sentence)
+# print(f"The sentence has {word_count} words.")
+
+#34- Find common elements in two lists...
+# list1 = [1, 2, 3, 4, 5]
+# list2 = [3, 5, 6, 7, 8]
+# common_elements = []
+# for element1 in list1:
+#     for element2 in list2:
+#         if element1 == element2:
+#             common_elements.append(element1)
+#             break
+# print("Common elements:", common_elements)
+
+#35-Use elif to grade students based on score...
+# score = int(input("Enter student's score: "))
+# if 90 <= score <= 100:
+#     grade = 'A'
+# elif 80 <= score < 90:
+#     grade = 'B'
+# elif 70 <= score < 80:
+#     grade = 'C'
+# elif 60 <= score < 70:
+#     grade = 'D'
+# elif 0 <= score < 60:
+#     grade = 'F'
+# else:
+#     grade = 'Invalid Score'
+# print("Grade:", grade)
+
+#36-Print a right-angled triangle using *
+# rows = int(input("Enter number of rows: "))
+# for i in range(1, rows + 1):
+#     print("*" * i)
+
+#37- Check if a year is a leap year...
+# year = int(input("Enter a year: "))
+# if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+#     print("Leap year")
+# else:
+#     print("Not a leap year")
+
+#38-Print Fibonacci series using loop...
+# n = int(input("Enter number of terms: "))
+# a, b = 0, 1
+# print("Fibonacci series:")
+# for _ in range(n):
+#     print(a, end=' ')
+#     a, b = b, a + b
+# print()
+
+#39- Count uppercase and lowercase letters in a string....
+# text = input("Enter a string: ")
+# upper = 0
+# lower = 0
+# for char in text:
+#     if char.isupper():
+#         upper += 1
+#     elif char.islower():
+#         lower += 1
+# print("Uppercase letters:", upper)
+# print("Lowercase letters:", lower)
+
+#40- Print numbers from 100 to 1 using loop...
+# for i in range(100, 0, -1):
+#     print(i, end=' ')
+# print()
+
+#                ----END OF ASSIGNMENT-1---
